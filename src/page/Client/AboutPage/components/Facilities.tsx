@@ -1,11 +1,14 @@
 import { ZoomIn } from "lucide-react";
 import { FACILITIES } from "../../../../Mock/MockData/CoSoVatCHat/CoSoVatChat";
+import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 const Facilities = () => {
-  const openLb = (index: number) => {
-    // Logic mở lightbox của bạn ở đây
-    console.log("Mở ảnh số:", index);
-  };
+  const [index, setIndex] = useState(-1);
+
+  // Tạo mảng chỉ chứa link ảnh cho FsLightbox
+  const slides = FACILITIES.map((f) => ({ src: f.img }));
 
   return (
     <section className="py-24 px-6 bg-white">
@@ -44,8 +47,8 @@ const Facilities = () => {
         >
           {FACILITIES.map((f, i) => (
             <div
-              key={i}
-              onClick={() => openLb(i)}
+              key={f.id}
+              onClick={() => setIndex(i)}
               className={`group relative overflow-hidden rounded-2xl cursor-pointer shadow-sm ${
                 f.wide ? "md:col-span-2" : "md:col-span-1"
               }`}
@@ -67,13 +70,20 @@ const Facilities = () => {
 
               {/* Label - Hiển thị ở góc dưới */}
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t from-black/70 to-transparent">
-                <span className="text-white font-['Lexend'] font-semibold text-lg translate-y-2 group-hover:translate-y-0 transition-transform duration-300 inline-block">
+                <span className="text-white font-semibold text-lg translate-y-2 group-hover:translate-y-0 transition-transform duration-300 inline-block">
                   {f.label}
                 </span>
               </div>
             </div>
           ))}
         </div>
+
+        <Lightbox
+          open={index >= 0}
+          close={() => setIndex(-1)}
+          index={index}
+          slides={slides}
+        />
       </div>
     </section>
   );

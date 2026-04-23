@@ -8,7 +8,7 @@ import ProgramSection from "./components/ProgramSection";
 import GallerySection from "./components/GallerySection";
 import FeedBackSection from "./components/FeedBackSection";
 import NewsEventSection from "./components/NewsEventSection";
-import CTABanner from "./components/CTABanner";
+import CTABanner from "../../../components/views/CTABanner";
 
 /* ─────────────────────────── COMPONENT ─────────────────────── */
 export default function PrimarySchoolHomepage() {

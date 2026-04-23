@@ -17,18 +17,20 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-linear-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-200">
-            <span className="text-white text-xl">🏫</span>
-          </div>
-          <div>
-            <div className="font-heading font-900 text-lg leading-tight text-gray-900">
-              TeachCrop
+        <div>
+          <a className="flex items-center gap-3" href="/">
+            <div className="w-10 h-10 rounded-2xl bg-linear-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-200">
+              <span className="text-white text-xl">🏫</span>
             </div>
-            <div className="font-heading text-xs font-600 text-blue-500 leading-tight -mt-0.5">
-              Trường tiểu học
+            <div>
+              <div className="font-heading font-900 text-lg leading-tight text-gray-900">
+                TeachCrop
+              </div>
+              <div className="font-heading text-xs font-600 text-blue-500 leading-tight -mt-0.5">
+                Trường tiểu học
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         {/* Desktop Nav */}

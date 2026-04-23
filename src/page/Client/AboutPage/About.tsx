@@ -3,6 +3,7 @@ import MVV from "./components/MVV";
 import TeamSection from "./components/Team";
 import Facilities from "./components/Facilities";
 import Hero from "./components/Hero";
+import CTABanner from "../../../components/views/CTABanner";
 
 export default function AboutPage() {
   return (
@@ -21,6 +22,9 @@ export default function AboutPage() {
 
       {/* ── FACILITIES ── */}
       <Facilities />
+
+      {/* ── CTA BANNER ── */}
+      <CTABanner />
     </div>
   );
 }
