@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lato:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+.font-heading {
+  font-family: "Nunito", sans-serif;
+}
+
+.hero-bg {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(30, 58, 138, 0.72) 0%,
+      rgba(17, 24, 39, 0.45) 60%,
+      rgba(5, 150, 105, 0.3) 100%
+    ),
+    url("https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1600&q=80&auto=format&fit=crop")
+      center/cover no-repeat;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes zoomSlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes lbFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-zoom {
+  animation: zoomSlow 12s ease-in-out infinite alternate;
+}
+.hero-text-1 {
+  opacity: 0;
+}
+.hero-text-1.loaded {
+  animation: fadeInUp 0.7s 0.2s ease forwards;
+}
+.hero-text-2 {
+  opacity: 0;
+}
+.hero-text-2.loaded {
+  animation: fadeInUp 0.7s 0.45s ease forwards;
+}
+.hero-btns {
+  opacity: 0;
+}
+.hero-btns.loaded {
+  animation: slideUp 0.6s 0.7s ease forwards;
+}
+.hero-card {
+  opacity: 0;
+}
+.hero-card.loaded {
+  animation: scaleIn 0.7s 0.9s ease forwards;
+}
+.float-card {
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.feature-card {
+  transition:
+    transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.28s ease;
+}
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.program-card {
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease;
+}
+.program-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.14);
+}
+.program-card:hover .prog-img {
+  transform: scale(1.08);
+}
+.prog-img {
+  transition: transform 0.5s ease;
+}
+
+.gitem {
+  overflow: hidden;
+  border-radius: 18px;
+  cursor: pointer;
+  position: relative;
+}
+.gitem img {
+  transition: transform 0.45s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gitem:hover img {
+  transform: scale(1.1);
+}
+.g-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(17, 24, 39, 0.8) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  border-radius: 18px;
+}
+.gitem:hover .g-overlay {
+  opacity: 1;
+}
+
+.news-card {
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+.news-card:hover .news-img {
+  transform: scale(1.07);
+}
+.news-img {
+  transition: transform 0.5s ease;
+}
+
+.t-slide {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.t-slide.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+.t-slide.off {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.stagger-1 {
+  opacity: 0;
+  transition:
+    opacity 0.5s 0.08s,
+    transform 0.5s 0.08s;
+  transform: translateY(24px);
+}
+.stagger-2 {
+  opacity: 0;
+  transition:
+    opacity 0.5s 0.18s,
+    transform 0.5s 0.18s;
+  transform: translateY(24px);
+}
+.stagger-3 {
+  opacity: 0;
+  transition:
+    opacity 0.5s 0.28s,
+    transform 0.5s 0.28s;
+  transform: translateY(24px);
+}
+.stagger-4 {
+  opacity: 0;
+  transition:
+    opacity 0.5s 0.38s,
+    transform 0.5s 0.38s;
+  transform: translateY(24px);
+}
+.stagger-5 {
+  opacity: 0;
+  transition:
+    opacity 0.5s 0.48s,
+    transform 0.5s 0.48s;
+  transform: translateY(24px);
+}
+.stagger-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.about-img:hover img {
+  transform: scale(1.05);
+}
+.about-img img {
+  transition: transform 0.5s ease;
+}
+.about-text {
+  opacity: 0;
+  transform: translateX(32px);
+  transition:
+    opacity 0.6s 0.2s ease,
+    transform 0.6s 0.2s ease;
+}
+.about-text.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.stat-num {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+.stat-num.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+  border-radius: 9999px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition:
+    background 0.2s,
+    transform 0.18s,
+    box-shadow 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+}
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  border-radius: 9999px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.18s;
+  cursor: pointer;
+}
+.btn-outline:hover {
+  background: white;
+  color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  color: #374151;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+.nav-link:hover {
+  color: #3b82f6;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.wave-divider {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.mobile-menu {
+  transition:
+    max-height 0.35s ease,
+    opacity 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.mobile-menu.open {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.lightbox-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.93);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: lbFadeIn 0.2s ease;
+}
+.dot-btn {
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.dot-btn.active {
+  transform: scale(1.35);
+}
