@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { GALLERY } from "../../../Mock/MockData/Home/homeMockData";
-import Header from "../Layout/Header";
 import HeroSection from "./components/HeroSection";
 import FeatureSection from "./components/FeatureSection";
 import StatBandSection from "./components/StatBandSection";
@@ -10,7 +9,6 @@ import GallerySection from "./components/GallerySection";
 import FeedBackSection from "./components/FeedBackSection";
 import NewsEventSection from "./components/NewsEventSection";
 import CTABanner from "./components/CTABanner";
-import Footer from "../Layout/Footer";
 
 /* ─────────────────────────── COMPONENT ─────────────────────── */
 export default function PrimarySchoolHomepage() {
@@ -120,9 +118,6 @@ export default function PrimarySchoolHomepage() {
         </div>
       )}
 
-      {/* ── HEADER ── */}
-      <Header />
-
       {/* ── HERO ── */}
       <HeroSection />
 
@@ -149,9 +144,6 @@ export default function PrimarySchoolHomepage() {
 
       {/* ── CTA BANNER ── */}
       <CTABanner />
-
-      {/* ── FOOTER ── */}
-      <Footer />
     </div>
   );
 }
