@@ -20,7 +20,7 @@ export const NAV_LINKS: LinkItem[] = [
   },
   {
     label: "Chương trình",
-    href: "/chuong-trinh",
+    href: "/chuong-trinh-hoc",
     children: [
       { label: "Chương trình Bộ GD&ĐT", href: "/chuong-trinh/bo-giao-duc" },
       { label: "Chương trình Tiếng Anh", href: "/chuong-trinh/tieng-anh" },

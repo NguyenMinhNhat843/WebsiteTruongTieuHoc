@@ -1,5 +1,5 @@
+import SchoolFooter from "./Footer";
 import Header from "./Header";
-import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 
 const ClientLayout = () => {
@@ -7,7 +7,7 @@ const ClientLayout = () => {
     <div>
       <Header />
       <Outlet />
-      <Footer />
+      <SchoolFooter />
     </div>
   );
 };

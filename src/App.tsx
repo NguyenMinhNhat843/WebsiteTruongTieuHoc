@@ -6,6 +6,8 @@ import PrimarySchoolHomepage from "./page/Client/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import AcademicProgram from "./page/Client/ChuongTrinhPage/ChuongTrinh";
+import TuyenSinhPage from "./page/Client/TuyenSinhPage/TuyenSinhPage";
 
 function App() {
   useEffect(() => {
@@ -21,6 +23,8 @@ function App() {
         <Route element={<ClientLayout />}>
           <Route path="/" element={<PrimarySchoolHomepage />} />
           <Route path="/gioi-thieu" element={<AboutPage />} />
+          <Route path="/chuong-trinh-hoc" element={<AcademicProgram />} />
+          <Route path="/tuyen-sinh" element={<TuyenSinhPage />} />
         </Route>
       </Routes>
     </Router>
