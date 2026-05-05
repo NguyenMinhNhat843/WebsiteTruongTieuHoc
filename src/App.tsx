@@ -8,6 +8,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import AcademicProgram from "./page/Client/ChuongTrinhPage/ChuongTrinh";
 import TuyenSinhPage from "./page/Client/TuyenSinhPage/TuyenSinhPage";
+import ContactPage from "./page/Client/LienHe/ContactPage";
 
 function App() {
   useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/gioi-thieu" element={<AboutPage />} />
           <Route path="/chuong-trinh-hoc" element={<AcademicProgram />} />
           <Route path="/tuyen-sinh" element={<TuyenSinhPage />} />
+          <Route path="/lien-he" element={<ContactPage />} />
         </Route>
       </Routes>
     </Router>
