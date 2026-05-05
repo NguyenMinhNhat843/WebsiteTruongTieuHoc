@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Send, CheckCircle2, Loader2 } from "lucide-react";
 
 const AdmissionForm = () => {
@@ -10,7 +10,7 @@ const AdmissionForm = () => {
     birthYear: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
 
@@ -22,7 +22,7 @@ const AdmissionForm = () => {
 
   if (status === "success") {
     return (
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" id="register-form">
         <div
           className="container mx-auto px-6 max-w-xl text-center"
           data-aos="zoom-in"

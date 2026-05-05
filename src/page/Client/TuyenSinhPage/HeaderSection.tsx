@@ -23,7 +23,7 @@ const SchoolHero = () => {
             alt="Học sinh trường tiểu học"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-800/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-blue-900/90 via-blue-800/40 to-transparent"></div>
         </div>
 
         {/* Nội dung chính */}
@@ -68,7 +68,14 @@ const SchoolHero = () => {
               data-aos-delay="300"
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="group relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+              <button
+                className="group relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                onClick={() =>
+                  document
+                    .getElementById("register-form")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
                 <span>ĐĂNG KÝ TUYỂN SINH 2026–2027</span>
                 <ArrowRight
                   size={20}
@@ -83,17 +90,19 @@ const SchoolHero = () => {
           </div>
         </div>
 
-        {/* Hiệu ứng sóng nhẹ ở dưới cùng (tùy chọn) */}
-        <div className="absolute bottom-0 left-0 w-full leading-[0] z-10">
+        {/* Hiệu ứng sóng nhấp nhô mạnh mẽ nhưng mượt mà */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
           <svg
-            className="relative block w-full h-[60px]"
+            className="relative block w-[calc(100%+1.3px)] h-[70px] md:h-[100px]"
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
           >
             <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C58.47,105.15,119.58,112.55,180,105.54,235.1,99.13,283.47,70.57,321.39,56.44Z"
+              d="M0,60 
+              C300,120 900,0 1200,60 
+              L1200,120 L0,120 Z"
               fill="#ffffff"
-            ></path>
+            />
           </svg>
         </div>
       </section>

@@ -6,15 +6,13 @@ import SchoolHero from "./HeaderSection";
 import ParentFeedback from "./ParentFeedback";
 import SchoolFacilities from "./SchoolFacilities";
 import TuitionFees from "./TuitionFees";
-import WhyChooseUs from "./WhyChooseUs";
 
 const TuyenSinhPage = () => {
   return (
     <div>
       <SchoolHero />
-      <WhyChooseUs />
-      <SchoolFacilities />
       <AdmissionSteps />
+      <SchoolFacilities />
       <AdmissionDetails />
       <TuitionFees />
       <ParentFeedback />

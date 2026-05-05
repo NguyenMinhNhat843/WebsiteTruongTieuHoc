@@ -73,7 +73,7 @@ const SchoolFacilities = () => {
               data-aos="zoom-in"
               data-aos-delay={index * 100}
             >
-              <div className="aspect-[16/9] lg:aspect-auto lg:h-[300px]">
+              <div className="aspect-video lg:aspect-auto lg:h-75">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -82,7 +82,7 @@ const SchoolFacilities = () => {
                 />
               </div>
               {/* Overlay Caption */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-white font-bold text-xl">{item.title}</h3>
                 <p className="text-gray-200 text-sm mt-2">{item.desc}</p>
               </div>
@@ -109,7 +109,7 @@ const SchoolFacilities = () => {
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
-                    className="w-full h-[250px] object-cover"
+                    className="w-full h-62.5 object-cover"
                   />
                   <div className="p-4 bg-white">
                     <h3 className="font-bold text-lg text-blue-900">

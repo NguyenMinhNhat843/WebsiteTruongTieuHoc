@@ -1,4 +1,3 @@
-import React from "react";
 import { Users, Calendar, Award, Clock } from "lucide-react";
 
 const admissionInfo = [

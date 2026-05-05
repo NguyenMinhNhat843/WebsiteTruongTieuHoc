@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqData = [
@@ -52,7 +52,6 @@ const FAQ = () => {
           {faqData.map((item, index) => (
             <div
               key={index}
-              data-aos="fade-up"
               data-aos-delay={index * 50}
               className={`border rounded-2xl overflow-hidden transition-all duration-300 ${
                 activeIndex === index

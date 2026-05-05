@@ -1,4 +1,3 @@
-import React from "react";
 import { MapPin, Phone, Mail, Globe, Factory } from "lucide-react";
 
 const SchoolFooter = () => {
@@ -15,7 +14,7 @@ const SchoolFooter = () => {
                 <Globe className="text-blue-900" size={24} />
               </div>
               <span className="text-xl font-bold tracking-tight">
-                TRƯỜNG TIỂU HỌC <br /> HẠNH PHÚC
+                TRƯỜNG TIỂU HỌC <br /> TECHCORP
               </span>
             </div>
             <p className="text-blue-100/70 text-sm leading-relaxed">
@@ -135,7 +134,7 @@ const SchoolFooter = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-blue-100/50">
-          <p>© {currentYear} Bản quyền thuộc về Trường Tiểu Học Hạnh Phúc.</p>
+          <p>© {currentYear} Bản quyền thuộc về Trường Tiểu Học TechCorp.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">
               Chính sách bảo mật

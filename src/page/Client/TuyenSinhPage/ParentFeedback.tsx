@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { Quote } from "lucide-react";
@@ -33,6 +32,7 @@ const testimonials = [
       "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=150",
   },
 ];
+const doubleTestimonials = [...testimonials, ...testimonials];
 
 const ParentFeedback = () => {
   return (
@@ -67,9 +67,9 @@ const ParentFeedback = () => {
             pagination={{ clickable: true, dynamicBullets: true }}
             className="pb-16 testimonial-swiper"
           >
-            {testimonials.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-white text-gray-800 p-8 md:p-10 rounded-[2rem] shadow-2xl relative mt-10 transition-all duration-300 hover:scale-[1.02]">
+            {doubleTestimonials.map((item, index) => (
+              <SwiperSlide key={index} className="pb-16">
+                <div className="bg-white h-75 flex flex-col justify-between text-gray-800 p-8 md:p-10 rounded-4xl shadow-2xl relative mt-10 transition-all duration-300 hover:scale-[1.02]">
                   {/* Icon nháy kép trang trí */}
                   <div className="absolute -top-6 left-10 bg-yellow-400 p-4 rounded-2xl shadow-lg text-blue-900">
                     <Quote size={24} fill="currentColor" />
