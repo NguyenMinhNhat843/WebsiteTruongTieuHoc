@@ -10,6 +10,7 @@ import AcademicProgram from "./page/Client/ChuongTrinhPage/ChuongTrinh";
 import TuyenSinhPage from "./page/Client/TuyenSinhPage/TuyenSinhPage";
 import ContactPage from "./page/Client/LienHe/ContactPage";
 import NewsPage from "./page/Client/TinTuc/TicTucList";
+import NewsDetailPage from "./page/Client/TinTuc/TInTucOne";
 
 function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/tuyen-sinh" element={<TuyenSinhPage />} />
           <Route path="/lien-he" element={<ContactPage />} />
           <Route path="/tin-tuc" element={<NewsPage />} />
+          <Route path="/tin-tuc/:id" element={<NewsDetailPage />} />
         </Route>
       </Routes>
     </Router>

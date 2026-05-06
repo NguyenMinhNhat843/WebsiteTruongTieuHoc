@@ -47,27 +47,29 @@ const NewsPage = () => {
             className="lg:col-span-2 group relative h-100 md:h-125 rounded-[2.5rem] overflow-hidden shadow-2xl cursor-pointer"
             data-aos="zoom-in"
           >
-            <img
-              src="https://images.unsplash.com/photo-1540479859555-17af45c78602?auto=format&fit=crop&q=80&w=1200"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              alt="Featured"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent transition-opacity group-hover:opacity-90"></div>
-            <div className="absolute bottom-0 p-8 md:p-12">
-              <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold mb-4 inline-block">
-                Nổi bật
-              </span>
-              <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
-                Lễ hội trải nghiệm văn hóa dân gian 2026
-              </h2>
-              <p className="text-gray-200 line-clamp-2 max-w-xl mb-6">
-                Khám phá hành trình các em học sinh tự tay làm bánh chưng và
-                tham gia các trò chơi dân gian đầy màu sắc...
-              </p>
-              <div className="flex items-center text-white font-semibold gap-2 opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0">
-                Xem chi tiết <ArrowRight size={20} />
+            <a href="/tin-tuc/testdetail" className="">
+              <img
+                src="https://images.unsplash.com/photo-1540479859555-17af45c78602?auto=format&fit=crop&q=80&w=1200"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Featured"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent transition-opacity group-hover:opacity-90"></div>
+              <div className="absolute bottom-0 p-8 md:p-12">
+                <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold mb-4 inline-block">
+                  Nổi bật
+                </span>
+                <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
+                  Lễ hội trải nghiệm văn hóa dân gian 2026
+                </h2>
+                <p className="text-gray-200 line-clamp-2 max-w-xl mb-6">
+                  Khám phá hành trình các em học sinh tự tay làm bánh chưng và
+                  tham gia các trò chơi dân gian đầy màu sắc...
+                </p>
+                <div className="flex items-center text-white font-semibold gap-2 opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0">
+                  Xem chi tiết <ArrowRight size={20} />
+                </div>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* 2 Bài nhỏ bên phải */}
@@ -78,20 +80,22 @@ const NewsPage = () => {
                 className="group relative h-[185px] md:h-[237px] rounded-[2rem] overflow-hidden shadow-xl cursor-pointer"
                 data-aos="fade-left"
               >
-                <img
-                  src={`https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800&sig=${i}`}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Minor news"
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
-                <div className="absolute bottom-0 p-6">
-                  <h3 className="text-white font-bold text-lg leading-tight line-clamp-2">
-                    Hội nghị phụ huynh đầu năm: Gắn kết yêu thương
-                  </h3>
-                  <div className="text-blue-300 text-sm mt-2 flex items-center gap-2">
-                    <Calendar size={14} /> 20/04/2026
+                <a href="/tin-tuc/testdetail" className="">
+                  <img
+                    src={`https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800&sig=${i}`}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    alt="Minor news"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
+                  <div className="absolute bottom-0 p-6">
+                    <h3 className="text-white font-bold text-lg leading-tight line-clamp-2">
+                      Hội nghị phụ huynh đầu năm: Gắn kết yêu thương
+                    </h3>
+                    <div className="text-blue-300 text-sm mt-2 flex items-center gap-2">
+                      <Calendar size={14} /> 20/04/2026
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             ))}
           </div>
