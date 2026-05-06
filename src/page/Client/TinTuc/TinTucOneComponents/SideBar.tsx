@@ -1,7 +1,3 @@
-// ============================================================
-// COMPONENT: Sidebar
-
-import { useScrollReveal } from "../hook/useScrollReveal";
 import RelatedPostCard from "./RelatedPosstCard";
 
 interface Category {
@@ -143,13 +139,10 @@ function SidebarCard({
   title: string;
   children: React.ReactNode;
 }) {
-  const { ref, visible } = useScrollReveal();
   return (
     <div
-      ref={ref}
-      className={`bg-white rounded-2xl shadow-sm border border-sky-50 p-5 transition-all duration-700 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-      }`}
+      className={`bg-white rounded-2xl shadow-sm border border-sky-50 p-5 transition-all duration-700 `}
+      data-aos="fade-up"
     >
       <h3
         className="font-extrabold text-gray-700 text-sm mb-4 pb-3 border-b border-sky-100"

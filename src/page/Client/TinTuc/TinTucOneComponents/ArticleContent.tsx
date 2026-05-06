@@ -1,16 +1,8 @@
-import ContentReveal from "../CommonComponents/ContentReveal";
-import { useScrollReveal } from "../hook/useScrollReveal";
-
-// ============================================================
 export default function ArticleContent() {
-  const { ref, visible } = useScrollReveal();
-
   return (
     <div
-      ref={ref}
-      className={`bg-white rounded-2xl shadow-sm border border-sky-50 p-8 md:p-10 transition-all duration-700 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}
+      className={`bg-white rounded-2xl shadow-sm border border-sky-50 p-8 md:p-10 transition-all duration-700`}
+      data-aos="fade-up"
     >
       {/* Social share */}
       <div className="flex items-center gap-3 pb-6 border-b border-sky-100 mb-8">
@@ -59,7 +51,7 @@ export default function ArticleContent() {
         trường.
       </p>
 
-      <ContentReveal delay={100}>
+      <div data-aos="fade-up" data-aos-delay="100">
         <h2
           className="text-xl font-extrabold text-blue-700 mb-4 flex items-center gap-2"
           style={{ fontFamily: "'Nunito', sans-serif" }}
@@ -86,10 +78,10 @@ export default function ArticleContent() {
           đến lớp 5, trong đó có 120 em học sinh lớp 1 – những "mầm non" đang
           lần đầu tiên bước qua cánh cổng trường với bao bỡ ngỡ và thích thú.
         </p>
-      </ContentReveal>
+      </div>
 
       {/* Image */}
-      <ContentReveal delay={150}>
+      <div data-aos="fade-up" data-aos-delay="150">
         <figure className="mb-8">
           <div className="overflow-hidden rounded-2xl group cursor-pointer">
             <img
@@ -105,9 +97,9 @@ export default function ArticleContent() {
             Các em học sinh trong lễ khai giảng năm học 2025–2026
           </figcaption>
         </figure>
-      </ContentReveal>
+      </div>
 
-      <ContentReveal delay={200}>
+      <div data-aos="fade-up" data-aos-delay="200">
         <h2
           className="text-xl font-extrabold text-blue-700 mb-4 flex items-center gap-2"
           style={{ fontFamily: "'Nunito', sans-serif" }}
@@ -154,9 +146,9 @@ export default function ArticleContent() {
             ))}
           </ul>
         </div>
-      </ContentReveal>
+      </div>
 
-      <ContentReveal delay={250}>
+      <div data-aos="fade-up" data-aos-delay="250">
         <h2
           className="text-xl font-extrabold text-blue-700 mb-4 flex items-center gap-2"
           style={{ fontFamily: "'Nunito', sans-serif" }}
@@ -184,10 +176,10 @@ export default function ArticleContent() {
           người. Năm học mới 2025–2026 chính thức bắt đầu với bao hy vọng và
           quyết tâm từ toàn thể cộng đồng trường Tiểu học Ánh Bình Minh.
         </p>
-      </ContentReveal>
+      </div>
 
       {/* Tags */}
-      <ContentReveal delay={300}>
+      <div data-aos="fade-up" data-aos-delay="300">
         <div className="flex flex-wrap gap-2 mt-8 pt-6 border-t border-sky-100">
           <span
             className="text-sm font-bold text-gray-500 mr-2"
@@ -207,7 +199,7 @@ export default function ArticleContent() {
             ),
           )}
         </div>
-      </ContentReveal>
+      </div>
     </div>
   );
 }
